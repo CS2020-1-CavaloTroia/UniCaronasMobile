@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "136275384359",
+    "project_id": "unicaronas-638bb",
+    "storage_bucket": "unicaronas-638bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136275384359:android:cd5b4235eebaad25191602",
+        "android_client_info": {
+          "package_name": "br.com.unicaronas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136275384359-cr6cq139uutotr0ifg319mpeo5hipn38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmQY82Xrz4BTdm3sjXm67hsRgKRwWsMsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136275384359-cr6cq139uutotr0ifg319mpeo5hipn38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
