@@ -16,7 +16,6 @@ const INITIAL_STATE = {
   getUser: false,
   cpf: "",
   CNHDocument: null,
-  criminalRecord: null,
   profileStatus: null,
   vehicleBoard: "",
   vehicleModel: "",
@@ -44,7 +43,6 @@ export default function auth(state = INITIAL_STATE, action) {
         draft.thumbnail = action.payload.thumbnail;
         draft.cpf = action.payload.cpf;
         draft.CNHDocument = action.payload.CNHDocument;
-        draft.criminalRecord = action.payload.criminalRecord;
         break;
       }
 
@@ -55,7 +53,6 @@ export default function auth(state = INITIAL_STATE, action) {
         draft.thumbnail = null;
         draft.cpf = "";
         draft.CNHDocument = null;
-        draft.criminalRecord = null;
         break;
       }
 
@@ -78,7 +75,6 @@ export default function auth(state = INITIAL_STATE, action) {
         draft.token = action.payload.token;
         draft.cpf = action.payload.cpf;
         draft.CNHDocument = action.payload.CNHDocument;
-        draft.criminalRecord = action.payload.criminalRecord;
         draft.profileStatus = action.payload.profileStatus;
         draft.vehicleBoard = action.payload.vehicleBoard;
         draft.vehicleModel = action.payload.vehicleModel;
@@ -103,7 +99,6 @@ export default function auth(state = INITIAL_STATE, action) {
         draft.getUser = false;
         draft.cpf = "";
         draft.CNHDocument = null;
-        draft.criminalRecord = null;
         draft.profileStatus = null;
         draft.vehicleBoard = "";
         draft.vehicleModel = "";

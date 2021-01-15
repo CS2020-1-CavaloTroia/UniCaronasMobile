@@ -58,7 +58,7 @@ export const TypeButton = styled.TouchableOpacity`
   margin-bottom: 40px;
   height: 150px;
   border-radius: 500px;
-  background-color: ${colors.primaryColor};
+  background-color: ${colors.white};
   align-items: center;
   justify-content: center;
 `;
@@ -71,7 +71,7 @@ export const TypeButtonImage = styled.Image`
 
 export const TypeButtonText = styled.Text`
   font-size: 16px;
-  color: ${colors.white};
+  color: ${colors.secondaryColor};
 `;
 
 export const LoadingContainer = styled.View`
@@ -87,7 +87,6 @@ export const LoadingContainer = styled.View`
 export const UploadButtons = styled.View`
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin: 20px 0;
 `;
@@ -112,7 +111,7 @@ export const UploadButtonIcon = styled(AntDesign).attrs((props) => {
   return {
     size: 33,
     name: props.name,
-    color: colors.white,
+    color: colors.secondaryColor,
   };
 })``;
 
@@ -193,7 +192,7 @@ export const ChangeImageModalButtonIcon = styled(FontAwesome).attrs((props) => {
   return {
     size: 23,
     name: props.name,
-    color: colors.white,
+    color: colors.sec,
   };
 })``;
 

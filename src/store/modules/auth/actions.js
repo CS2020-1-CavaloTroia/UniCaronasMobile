@@ -18,7 +18,6 @@ export function signinRequest(
   type,
   cpf,
   CNHDocument,
-  criminalRecord,
   profileImage
 ) {
   return {
@@ -30,7 +29,6 @@ export function signinRequest(
       type,
       cpf,
       CNHDocument,
-      criminalRecord,
       profileImage,
     },
   };
@@ -47,7 +45,6 @@ export function signinSuccess(
   token,
   cpf,
   CNHDocument,
-  criminalRecord,
   profileStatus,
   vehicleBoard,
   vehicleModel,
@@ -66,7 +63,6 @@ export function signinSuccess(
       token,
       cpf,
       CNHDocument,
-      criminalRecord,
       profileStatus,
       vehicleBoard,
       vehicleModel,
@@ -112,12 +108,11 @@ export function userSuccess(
   name = "",
   thumbnail = null,
   cpf = "",
-  CNHDocument = null,
-  criminalRecord = null
+  CNHDocument = null
 ) {
   return {
     type: "@auth/USER_SUCCESS",
-    payload: { name, thumbnail, cpf, CNHDocument, criminalRecord },
+    payload: { name, thumbnail, cpf, CNHDocument },
   };
 }
 

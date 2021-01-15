@@ -1,7 +1,7 @@
 export default {
   //Aplication Colors
-  primaryColor: "#D2691E",
-  secondaryColor: "#3F0072",
+  primaryColor: "#FFD700",
+  secondaryColor: "#4169E1",
 
   inactiveBlack: "#00000044",
   inactiveWhite: "#FFFFFF44",

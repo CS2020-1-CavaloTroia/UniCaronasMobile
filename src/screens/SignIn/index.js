@@ -53,7 +53,7 @@ import Loading from "~/components/Loading";
 import { useFocusEffect } from "@react-navigation/native";
 import BackgroundGeolocation from "@mauron85/react-native-background-geolocation";
 
-import store from "~/assets/store.png";
+import schoolbag from "~/assets/schoolbag.png";
 import driver from "~/assets/driver.png";
 import KeyboardScrollView from "~/components/KeyboardScrollView";
 
@@ -73,7 +73,6 @@ export default function SignIn({ navigation }) {
   const loading = useSelector((state) => state.auth.loading);
   const CNHDocument = useSelector((state) => state.auth.CNHDocument);
   const thumbnail = useSelector((state) => state.auth.thumbnail);
-  const criminalRecord = useSelector((state) => state.auth.criminalRecord);
   const cpf = useSelector((state) => state.auth.cpf);
   const [type, setType] = useState("");
 
@@ -82,7 +81,6 @@ export default function SignIn({ navigation }) {
   //IMAGES/DOCUMENTS
   const [_CNHDocument, _setCNHDocument] = useState(null);
   const [_profileImage, _setProfileImage] = useState(null);
-  const [_criminalRecord, _setCriminalRecord] = useState(null);
 
   function onAuthStateChanged(user) {
     setResponse(user);
@@ -212,25 +210,6 @@ export default function SignIn({ navigation }) {
     }
   };
 
-  const selectCriminalRecord = async () => {
-    try {
-      const res = await DocumentPicker.pick({
-        type: [DocumentPicker.types.pdf],
-      });
-      _setCriminalRecord({
-        doc: res.uri,
-        mime: res.type,
-        name: res.name,
-      });
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        // User cancelled the picker, exit any dialogs or menus and move on
-      } else {
-        throw err;
-      }
-    }
-  };
-
   const selectImageFromGallery = async () => {
     if (uploadType === 1) {
       const image = await ImagePicker.openPicker({
@@ -306,7 +285,6 @@ export default function SignIn({ navigation }) {
         (type === "driver" &&
           _cpf.length === 14 &&
           (_CNHDocument || CNHDocument) &&
-          (_criminalRecord || criminalRecord) &&
           (_profileImage || thumbnail)))
     );
   };
@@ -349,7 +327,9 @@ export default function SignIn({ navigation }) {
             }
             loading={loadingSMS}
             color={
-              phoneNumber.length === 15 ? colors.white : colors.inactiveWhite
+              phoneNumber.length === 15
+                ? colors.secondaryColor
+                : colors.inactiveWhite
             }
             onPress={
               phoneNumber.length === 15 && !loadingSMS
@@ -442,7 +422,7 @@ export default function SignIn({ navigation }) {
                     }
               }
             >
-              <TypeButtonImage source={store} />
+              <TypeButtonImage style={{ width: 45 }} source={schoolbag} />
               <TypeButtonText>Passageiro</TypeButtonText>
               {loading && type === "passenger" && (
                 <LoadingContainer>
@@ -531,22 +511,6 @@ export default function SignIn({ navigation }) {
 
                     <UploadButtonText>Imagem da CNH</UploadButtonText>
                   </UploadButtonContainer>
-
-                  <UploadButtonContainer onPress={() => selectCriminalRecord()}>
-                    <UploadButtonContainerIcon>
-                      <UploadButtonIcon name="pdffile1" />
-
-                      {(_criminalRecord || criminalRecord) && (
-                        <CheckUploadContainer>
-                          <CheckIcon />
-                        </CheckUploadContainer>
-                      )}
-                    </UploadButtonContainerIcon>
-
-                    <UploadButtonText>
-                      Certidão de antecedentes criminais
-                    </UploadButtonText>
-                  </UploadButtonContainer>
                 </>
               )}
 
@@ -570,7 +534,7 @@ export default function SignIn({ navigation }) {
             loading={loading}
             style={{ width: 180 }}
             background={finish() ? colors.primaryColor : colors.inactiveWhite}
-            color={finish() ? colors.white : colors.inactiveWhite}
+            color={finish() ? colors.secondaryColor : colors.inactiveWhite}
             onPress={
               !loading
                 ? () =>
@@ -583,7 +547,6 @@ export default function SignIn({ navigation }) {
                             type,
                             _cpf,
                             _CNHDocument,
-                            _criminalRecord,
                             _profileImage
                           )
                         )

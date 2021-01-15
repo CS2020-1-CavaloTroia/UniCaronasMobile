@@ -48,7 +48,6 @@ function* signin({ payload }) {
     googleUID,
     cpf,
     CNHDocument,
-    criminalRecord,
     profileImage,
   } = payload;
 
@@ -113,24 +112,6 @@ function* signin({ payload }) {
       data.CNHDocument = urlCNH.data;
     }
 
-    if (criminalRecord) {
-      const CriminalformData = new FormData();
-      CriminalformData.append("file", {
-        uri: criminalRecord.doc,
-        type: criminalRecord.mime,
-        name: criminalRecord.name,
-      });
-      CriminalformData.append("_id", data._id);
-
-      const urlCriminal = yield call(
-        api.post,
-        `/driver/updatecriminalreport`,
-        CriminalformData
-      );
-
-      data.criminalRecord = urlCriminal.data;
-    }
-
     yield put(
       signinSuccess(
         data.name,
@@ -143,7 +124,6 @@ function* signin({ payload }) {
         data.token,
         data.cpf,
         data.CNHDocument,
-        data.criminalRecord,
         data.profileStatus,
         data.vehicleBoard,
         data.vehicleModel,
@@ -176,8 +156,7 @@ function* userRequest({ payload }) {
           response.data.name,
           response.data.thumbnail_url,
           response.data.cpf,
-          response.data.CNHDocument,
-          response.data.criminalRecord
+          response.data.CNHDocument
         )
       );
     else yield put(userSuccess());

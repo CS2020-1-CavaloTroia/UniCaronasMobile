@@ -2,12 +2,13 @@ import React from "react";
 
 import { Container, TextButton, Icon } from "./styles";
 import Loading from "../Loading";
+import colors from "~/styles/colors";
 
 export default function Button2({
   text = "",
   icon = null,
   action = null,
-  color = "white",
+  color = colors.secondaryColor,
   background = "black",
   loading = false,
 }) {
