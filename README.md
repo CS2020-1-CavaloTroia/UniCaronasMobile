@@ -63,7 +63,7 @@ Para o back-end da aplicação será utilizado NodeJS, que contempla ambiente de
 
 Também será  utilizado MongoDB Atlas para a base de dados juntamente com Heroku, que é uma plataforma em nuvem (PaaS - Platform as a service) que suporta várias tecnologias para a hospedagem de aplicações.
 
-- [ ] React Native versão xx
+- [ ] React Native
 - [ ] Node.js versão 14.15.4 LTS
 - [ ] MongoDB 
 - [ ] Heroku 
