@@ -41,7 +41,8 @@ BACKEND DISPONÍVEL EM: https://github.com/CS2020-1-CavaloTroia/UniCaronasBacken
 
 ## 🎨 Layout
 
-Realizamos a contrução de wireframes para o projeto, que pode ser encontrado neste repositório na pasta /wireframes
+Realizamos a contrução de wireframes para o projeto, que pode ser encontrado no repositório UniCaronas na pasta /wireframes
+https://github.com/CS2020-1-CavaloTroia/UniCaronas
 
 ## 🛠 Tecnologias
 
