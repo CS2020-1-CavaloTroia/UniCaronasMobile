@@ -167,7 +167,7 @@ export default function ClientMap({ navigation }) {
   const getLocation = async (street, number) => {
     try {
       let resp = await fetch(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${number}+${street}+Ji-Parana&key=${GOOGLE_MAPS_APIKEY}`
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${number}+${street}&key=${GOOGLE_MAPS_APIKEY}`
       );
 
       let respJson = await resp.json();
