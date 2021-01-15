@@ -34,7 +34,7 @@ export default function Races({ route, navigation }) {
       return (
         <LoadingContainter>
           <Message style={{ marginRight: 10 }}>
-            Não há entregas no momento
+            Não há corridas no momento
           </Message>
         </LoadingContainter>
       );
@@ -66,7 +66,7 @@ export default function Races({ route, navigation }) {
   return (
     <Container>
       {filter === "awaiting" && <Title>Corridas disponíveis</Title>}
-      {filter === "inProgress" && <Title>Entrega em progresso</Title>}
+      {filter === "inProgress" && <Title>Corrida em progresso</Title>}
 
       <ScrollContainer>
         <RaceList>{renderList()}</RaceList>

@@ -56,9 +56,6 @@ export default function ClientMap({ navigation }) {
 
   const NewRaceFormSchema = Yup.object().shape({
     street: Yup.string().required("Informe um endereço válido."),
-    client_phone_number: Yup.string()
-      .required("Número de telefone obrigatório.")
-      .min(15, "Informe um número válido."),
   });
 
   useEffect(() => {
@@ -167,7 +164,7 @@ export default function ClientMap({ navigation }) {
     );
   };
 
-  const getLocation = async (street, number, client_phone_number) => {
+  const getLocation = async (street, number) => {
     try {
       let resp = await fetch(
         `https://maps.googleapis.com/maps/api/geocode/json?address=${number}+${street}+Ji-Parana&key=${GOOGLE_MAPS_APIKEY}`
@@ -185,8 +182,7 @@ export default function ClientMap({ navigation }) {
         initialCoords.coords.longitude,
         { latitude, longitude },
         street,
-        number,
-        client_phone_number
+        number
       );
 
       setModalPlace(false);
@@ -200,8 +196,7 @@ export default function ClientMap({ navigation }) {
     longitude,
     destination,
     street,
-    number,
-    client_phone_number
+    number
   ) => {
     try {
       let resp = await fetch(
@@ -223,7 +218,7 @@ export default function ClientMap({ navigation }) {
             latitude: destination.latitude,
             longitude: destination.longitude,
           },
-          { street, number, client_phone_number },
+          { street, number },
           coords,
           respJson.routes[0].legs[0].distance.text,
           respJson.routes[0].legs[0].duration.text
@@ -289,7 +284,9 @@ export default function ClientMap({ navigation }) {
               background={colors.primaryColor}
               onPress={() => setModalPlace(true)}
             >
-              <TextButton>Alterar endereço</TextButton>
+              <TextButton color={colors.secondaryColor}>
+                Alterar endereço
+              </TextButton>
             </Button>
 
             <Button
@@ -298,7 +295,7 @@ export default function ClientMap({ navigation }) {
                 dispatch(clearRoute());
               }}
             >
-              <TextButton>Cancelar</TextButton>
+              <TextButton color={colors.secondaryColor}>Cancelar</TextButton>
             </Button>
           </>
         )}
@@ -317,20 +314,13 @@ export default function ClientMap({ navigation }) {
         style={{ margin: 0, padding: 0 }}
       >
         <ModalContainer>
-          <TitlePlaceForm>Endereço da entrega</TitlePlaceForm>
+          <TitlePlaceForm>Endereço da corrida</TitlePlaceForm>
           <Formik
             initialValues={{
               street: address.street,
               number: address.number,
-              client_phone_number: address.client_phone_number,
             }}
-            onSubmit={(values) =>
-              getLocation(
-                values.street,
-                values.number,
-                values.client_phone_number
-              )
-            }
+            onSubmit={(values) => getLocation(values.street, values.number)}
             validationSchema={() => NewRaceFormSchema}
           >
             {({ values, handleChange, handleSubmit, errors, touched }) => (
@@ -354,22 +344,6 @@ export default function ClientMap({ navigation }) {
                   value={values.number}
                   onChangeText={handleChange("number")}
                   title="Número"
-                />
-
-                <Input
-                  placeholder="ex. (69) 00000-0000"
-                  placeholderTextColor={colors.inactiveBlack}
-                  color={colors.secondaryColor}
-                  value={values.client_phone_number}
-                  onChangeText={handleChange("client_phone_number")}
-                  title="Telefone do cliente"
-                  keyboardType="numeric"
-                  mask={"([00]) [00000]-[0000]"}
-                  errorText={
-                    errors.client_phone_number && touched.client_phone_number
-                      ? errors.client_phone_number
-                      : null
-                  }
                 />
 
                 <Button style={{ marginTop: 30 }} onPress={handleSubmit}>

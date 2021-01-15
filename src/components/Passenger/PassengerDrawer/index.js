@@ -37,14 +37,14 @@ export default function PassengerDrawer({ activeItemIndex, navigation }) {
   return (
     <Container>
       <HeaderButtons>
-        <HeaderButton
+        {/* <HeaderButton
           onPress={() => {
             navigation.navigate("Profile");
             navigation.closeDrawer();
           }}
         >
           <HeaderButtonEdit />
-        </HeaderButton>
+        </HeaderButton> */}
 
         {/* <HeaderButton>
           <HeaderButtonConfig />
@@ -67,7 +67,7 @@ export default function PassengerDrawer({ activeItemIndex, navigation }) {
         <Icon active={activeItemIndex === 0} name="map-marker-radius" />
       </NavigationButton>
 
-      <NavigationButton
+      {/* <NavigationButton
         onPress={() => {
           navigation.navigate("AwaitingRaces", {
             filter: "awaiting",
@@ -95,7 +95,7 @@ export default function PassengerDrawer({ activeItemIndex, navigation }) {
           Corridas em curso
         </NavigationButtonText>
         <Icon active={activeItemIndex === 2} name="map-marker-distance" />
-      </NavigationButton>
+      </NavigationButton> */}
 
       {/*<NavigationButton
         onPress={() => {

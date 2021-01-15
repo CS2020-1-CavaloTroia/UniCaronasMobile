@@ -91,12 +91,12 @@ export const NavigationButton = styled.TouchableOpacity`
 
 export const NavigationButtonText = styled.Text`
   font-size: 18px;
-  color: ${colors.white};
+  color: ${(props) => (props.active ? colors.secondaryColor : colors.white)};
 `;
 
 export const Icon = styled(MaterialCommunityIcons).attrs((props) => {
   return {
     size: 28,
-    color: colors.white,
+    color: props.active ? colors.secondaryColor : colors.white,
   };
 })``;

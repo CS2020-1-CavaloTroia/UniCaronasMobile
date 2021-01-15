@@ -29,6 +29,7 @@ import MenuButton from "~/components/MenuButton";
 import urls from "~/config/urls";
 import { openModal } from "~/store/modules/modal/actions";
 import shareLocation from "~/services/shareLocation";
+import { r } from "~/store/modules/race/actions";
 
 export default function DriverNavigation({ navigation }) {
   const dispatch = useDispatch();
@@ -133,6 +134,7 @@ export default function DriverNavigation({ navigation }) {
   };
 
   useEffect(() => {
+    //dispatch(r());
     // console.log(connection, gps, sharingLocation);
     if (profileStatus === "free" || profileStatus === "awaitingPayment") {
       if (connection && gps && !sharingLocation) {
@@ -140,6 +142,7 @@ export default function DriverNavigation({ navigation }) {
         BackgroundGeolocation.stop();
         shareLocation("Você está online :)", token, _id);
         setSharingLocation(true);
+        console.log("kkkkk");
       } else if (!connection) {
         BackgroundGeolocation.removeAllListeners();
         BackgroundGeolocation.stop();

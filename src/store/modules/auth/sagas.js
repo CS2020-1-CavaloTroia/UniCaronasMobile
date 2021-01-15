@@ -229,7 +229,7 @@ function* updateBasicInformations({ payload }) {
   try {
     const response = yield call(
       api.post,
-      `/driver/updatebasicinformations`,
+      `/driver/updatevehicleinformations`,
       body
     );
 

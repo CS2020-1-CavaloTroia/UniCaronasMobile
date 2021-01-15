@@ -6,7 +6,7 @@ const INITIAL_STATE = {
   destination: null,
   initialLocation: null,
   finalLocation: null,
-  address: { number: "", street: "", client_phone_number: "" },
+  address: { number: "", street: "" },
   route: null,
   distance: "",
   duration: "",
@@ -51,7 +51,7 @@ export default function race(state = INITIAL_STATE, action) {
         draft.route = null;
         draft.distance = "";
         draft.duration = "";
-        draft.address = { number: "", street: "", client_phone_number: "" };
+        draft.address = { number: "", street: "" };
         break;
       }
     }

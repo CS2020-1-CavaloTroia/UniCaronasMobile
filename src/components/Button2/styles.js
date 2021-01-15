@@ -32,5 +32,5 @@ export const TextButton = styled.Text`
 
 export const Icon = styled(MaterialCommunityIcons).attrs({
   size: 28,
-  color: colors.white,
+  color: colors.secondaryColor,
 })``;

@@ -70,7 +70,7 @@ export default function RaceInProgress({ navigation }) {
             color={colors.primaryColor}
             style={{ marginTop: 40 }}
           >
-            <ButtonText>Iniciar entrega</ButtonText>
+            <ButtonText>Iniciar corrida</ButtonText>
             <MotoIcon />
           </Button>
 
@@ -82,7 +82,7 @@ export default function RaceInProgress({ navigation }) {
               dispatch(cancelRaceRequest(inProgressRace._id));
             }}
           >
-            <ButtonText>Cancelar entrega</ButtonText>
+            <ButtonText>Cancelar corrida</ButtonText>
             <CancelIcon />
           </Button>
         </>
@@ -98,7 +98,7 @@ export default function RaceInProgress({ navigation }) {
           color={colors.primaryColor}
           style={{ marginTop: 40 }}
         >
-          <ButtonText>Finalizar entrega</ButtonText>
+          <ButtonText>Finalizar corrida</ButtonText>
           <FinishIcon />
         </Button>
       );
@@ -130,7 +130,7 @@ export default function RaceInProgress({ navigation }) {
       </Map>
       <InformationsContainer>
         <InformationsScroll>
-          <Title>Dados da entrega</Title>
+          <Title>Dados da corrida</Title>
           <Text>De: {inProgressRace?.passenger.name}</Text>
 
           <TouchableOpacity

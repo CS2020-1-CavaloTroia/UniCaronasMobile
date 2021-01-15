@@ -37,6 +37,7 @@ function* createRace({ payload }) {
 
     yield put(createRaceSuccess(response.data));
     yield put(clearRoute());
+    console.log(body);
   } catch (err) {
     console.log(err);
   }
@@ -155,6 +156,29 @@ function* removeRace({ payload }) {
   }
 }
 
+function* R({ payload }) {
+  const _id = yield select((state) => state.auth._id);
+
+  const token = yield select((state) => state.auth.token);
+
+  api.defaults.headers["access-token"] = token;
+
+  const body = {
+    _id,
+    latitude: -10.8782251,
+    longitude: -61.9197024,
+    heading: null,
+    speed: 12,
+  };
+
+  try {
+    yield call(api.post, `/driver/updatelocation`, body);
+    console.log(body);
+  } catch (err) {
+    console.log("wwwwww", err);
+  }
+}
+
 export default all([
   takeLatest("@race/CREATE_RACE_REQUEST", createRace),
   takeLatest("@race/GOTO_PASSENGER_RACE_REQUEST", goToPassengerRace),
@@ -162,4 +186,5 @@ export default all([
   takeLatest("@race/FINISH_RACE_REQUEST", finishRace),
   takeLatest("@race/CANCEL_RACE_REQUEST", cancelRace),
   takeLatest("@race/REMOVE_RACE_REQUEST", removeRace),
+  takeLatest("@race/R", R),
 ]);

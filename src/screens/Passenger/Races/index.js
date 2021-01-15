@@ -35,7 +35,7 @@ export default function Races({ route, navigation }) {
         return (
           <LoadingContainter>
             <Message style={{ marginRight: 10 }}>
-              Não há entregas em andamento
+              Não há corridas em andamento
             </Message>
           </LoadingContainter>
         );
@@ -62,7 +62,7 @@ export default function Races({ route, navigation }) {
         return (
           <LoadingContainter>
             <Message style={{ marginRight: 10 }}>
-              Não há entregas cadastradas
+              Não há corridas cadastradas
             </Message>
           </LoadingContainter>
         );
@@ -83,7 +83,7 @@ export default function Races({ route, navigation }) {
   return (
     <Container>
       {filter === "awaiting" && <Title>Aguardando motorista</Title>}
-      {filter === "inProgress" && <Title>Entregas em progresso</Title>}
+      {filter === "inProgress" && <Title>Corridas em progresso</Title>}
 
       <ScrollContainer>
         <RaceList>{renderList()}</RaceList>

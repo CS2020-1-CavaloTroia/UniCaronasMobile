@@ -67,7 +67,7 @@ export default function DriverDrawer({ activeItemIndex, navigation }) {
         <Icon active={activeItemIndex === 0} name="map-marker-radius" />
       </NavigationButton>
 
-      <NavigationButton
+      {/* <NavigationButton
         onPress={() => {
           navigation.navigate("AwaitingRaces", {
             filter: "awaiting",
@@ -77,7 +77,7 @@ export default function DriverDrawer({ activeItemIndex, navigation }) {
         active={activeItemIndex === 1}
       >
         <NavigationButtonText active={activeItemIndex === 1}>
-          Entregas em espera
+          Corridas em espera
         </NavigationButtonText>
         <Icon active={activeItemIndex === 1} name="clock-outline" />
       </NavigationButton>
@@ -91,11 +91,11 @@ export default function DriverDrawer({ activeItemIndex, navigation }) {
           active={activeItemIndex === 2}
         >
           <NavigationButtonText active={activeItemIndex === 2}>
-            Entrega em progresso
+            Corrida em progresso
           </NavigationButtonText>
           <Icon active={activeItemIndex === 2} name="map-marker-distance" />
         </NavigationButton>
-      )}
+      )} */}
 
       {/*<NavigationButton
         onPress={() => {

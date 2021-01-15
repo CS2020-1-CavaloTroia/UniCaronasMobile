@@ -95,7 +95,7 @@ export default function ({}) {
               color={colors.white}
               value={values.vehicleModel}
               onChangeText={handleChange("vehicleModel")}
-              title="Modelo da moto"
+              title="Modelo do carro"
               errorText={
                 errors.vehicleModel && touched.vehicleModel
                   ? errors.vehicleModel
@@ -104,7 +104,7 @@ export default function ({}) {
             />
 
             <SelectColor onPress={() => setModalPicker(true)}>
-              <SelectColorText>Cor da moto</SelectColorText>
+              <SelectColorText>Cor do carro</SelectColorText>
 
               <ColorSelected color={values.vehicleColor} />
             </SelectColor>

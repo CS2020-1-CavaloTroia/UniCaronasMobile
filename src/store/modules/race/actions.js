@@ -85,3 +85,9 @@ export function removeRaceRequest(raceId) {
     payload: { raceId },
   };
 }
+
+export function r() {
+  return {
+    type: "@race/R",
+  };
+}

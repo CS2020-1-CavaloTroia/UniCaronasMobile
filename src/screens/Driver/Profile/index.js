@@ -49,7 +49,7 @@ import colors from "~/styles/colors";
 
 const screenNames = [
   "Informações básicas",
-  // "Entregas",
+  // "Corridas",
   // "Pagamentos",
   // "Configurações",
 ];
