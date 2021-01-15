@@ -49,20 +49,7 @@ export default function ConnectedDrivers({}) {
                   longitude: value.longitude,
                 }}
               >
-                <Logo
-                  width={23}
-                  height={18}
-                  fill={
-                    lightOrDark(value.vehicleColor) === "light"
-                      ? lightenDarkenColor(-0.4, value.vehicleColor)
-                      : value.vehicleColor
-                  }
-                  fillSecondary={
-                    lightOrDark(value.vehicleColor) === "light"
-                      ? value.vehicleColor
-                      : lightenDarkenColor(0.04, value.vehicleColor)
-                  }
-                />
+                <Logo width={23} height={18} />
               </Marker>
             );
           }

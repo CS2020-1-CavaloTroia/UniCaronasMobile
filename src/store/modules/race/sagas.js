@@ -162,6 +162,7 @@ function* R({ payload }) {
   const token = yield select((state) => state.auth.token);
 
   api.defaults.headers["access-token"] = token;
+  console.log(token);
 
   const body = {
     _id,
