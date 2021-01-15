@@ -29,7 +29,7 @@ podem oferecer caronas, visualizá-las ou solicitá-las a um motorista.
 
 >Projeto desenvolvido durante o curso de Construção de Software da Universidade Federal de Goiás.
 
-> Obs: Este repositório contempla apenas o <strong>Frontend</strong> do projeto!
+> Obs: Este repositório contempla apenas o <strong>Frontend</strong> do projeto!</br>
 BACKEND DISPONÍVEL EM: https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
 
 ## 📱 Funcionalidades
