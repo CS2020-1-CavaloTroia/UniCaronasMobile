@@ -29,7 +29,7 @@ podem oferecer caronas, visualizá-las ou solicitá-las a um motorista.
 
 >Projeto desenvolvido durante o curso de Construção de Software da Universidade Federal de Goiás.
 
-> Obs: Este repositório contempla apenas o <strong>Frontend</strong> do projeto!
+> Obs: Este repositório contempla apenas o <strong>Frontend</strong> do projeto!</br>
 BACKEND DISPONÍVEL EM: https://github.com/CS2020-1-CavaloTroia/UniCaronasBackend
 
 ## 📱 Funcionalidades
@@ -41,11 +41,12 @@ BACKEND DISPONÍVEL EM: https://github.com/CS2020-1-CavaloTroia/UniCaronasBacken
 
 ## 🎨 Layout
 
-Realizamos a contrução de wireframes para o projeto, que pode ser encontrado neste repositório na pasta /wireframes
+Realizamos a contrução de wireframes para o projeto, que pode ser encontrado no repositório UniCaronas na pasta /wireframes
+https://github.com/CS2020-1-CavaloTroia/UniCaronas
 
 ## 🛠 Tecnologias
 
-### Frontend
+## Frontend
 - JavaScript
 - React Native 0.63.3
 
@@ -63,7 +64,7 @@ Para o back-end da aplicação será utilizado NodeJS, que contempla ambiente de
 
 Também será  utilizado MongoDB Atlas para a base de dados juntamente com Heroku, que é uma plataforma em nuvem (PaaS - Platform as a service) que suporta várias tecnologias para a hospedagem de aplicações.
 
-- [ ] React Native versão xx
+- [ ] React Native
 - [ ] Node.js versão 14.15.4 LTS
 - [ ] MongoDB 
 - [ ] Heroku 
@@ -73,11 +74,11 @@ Também será  utilizado MongoDB Atlas para a base de dados juntamente com Herok
 ### Arquitetura
 
 - [ ] Diagrama Arquitetural
-<img src="https://raw.githubusercontent.com/CS2020-1-CavaloTroia/UniCaronas/master/arquitetura_UniCaronas.png" width="800">
+<img src="https://github.com/CS2020-1-CavaloTroia/UniCaronas/blob/master/readme_images/arquitetura_UniCaronas.png" width="800">
 
 - [ ] Diagrama de Tecnologias
 
-<img src="https://raw.githubusercontent.com/CS2020-1-CavaloTroia/UniCaronas/master/tecnologias_UniCaronas.png" width="800">
+<img src="https://github.com/CS2020-1-CavaloTroia/UniCaronas/blob/master/readme_images/tecnologias_UniCaronas.png" width="800">
 
 ### Pré-requisitos
 
