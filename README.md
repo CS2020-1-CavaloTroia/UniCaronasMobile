@@ -46,7 +46,7 @@ https://github.com/CS2020-1-CavaloTroia/UniCaronas
 
 ## 🛠 Tecnologias
 
-### Frontend
+## Frontend
 - JavaScript
 - React Native 0.63.3
 
