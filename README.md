@@ -13,7 +13,7 @@
  * [Sobre o projeto](#-sobre-o-projeto)
  * [Funcionalidades](#-funcionalidades)
  * [Desenvolvimento](#-desenvolvimento)
- 	* [Primeiros Passos](#pré-requisitos)
+ 	* [Primeiros Passos](#primeiros-passos)
  	* [Rodando o Frontend](#rodando-o-frontend)
  * [Como contribuir](#-como-contribuir)
 
