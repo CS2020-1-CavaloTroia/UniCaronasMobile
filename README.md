@@ -44,8 +44,8 @@ Para acessar o repositório raiz acesse: https://github.com/CS2020-1-CavaloTroia
 
 Para dar início ao desenvolvimento do Frontend, certifique-se de instalar em sua máquina:
 - [ ] Editor de código-fonte como [VSCode](https://code.visualstudio.com/).
-- [ ] Node.js versão 14.15.4 LTS ou superior
-- [ ] Yarn versão 1.22.4 ou superior
+- [ ] [Node.js](https://nodejs.org/en/) versão 14.15.4 LTS ou superior
+- [ ] [Yarn](https://yarnpkg.com/) versão 1.22.4 ou superior
 - [ ] React Native
 	- Siga os passos no site do [React Native](https://reactnative.dev/docs/0.61/getting-started)
 	- Selecione o tipo de instalação **React Native CLI Quickstart** e o seu sistema operacional
